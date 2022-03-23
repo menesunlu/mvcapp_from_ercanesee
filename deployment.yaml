@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: mvcapp
-        image: registry.enes.local:5000/mvcapp:BuildIdv
+        image: menesunlu/mvcapp:$(BUILD_NUMBER)
         env:
           - name: PORT
             value: "80"
