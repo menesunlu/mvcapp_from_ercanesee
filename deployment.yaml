@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: mvcapp
-        image: menesunlu/mvcapp:$(BUILD_NUMBER)
+        image: menesunlu/mvcapp:${DOCKER_BUILD_NUMBER}v
         env:
           - name: PORT
             value: "80"
