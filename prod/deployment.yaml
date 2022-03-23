@@ -3,6 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mvcapp
+  namespace: prod
 spec:
   selector:
     matchLabels:
@@ -21,7 +22,7 @@ spec:
     spec:
       containers:
       - name: mvcapp
-        image: menesunlu/mvcapp:$(BUILD_NUMBER)
+        image: menesunlu/mvcapp:v${DOCKER_BUILD_NUMBER}
         env:
           - name: PORT
             value: "80"
