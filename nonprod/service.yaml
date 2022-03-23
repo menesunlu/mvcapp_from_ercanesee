@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mvcapp
+  namespace: nonprod
 spec:
   selector:
     app: mvcapp
