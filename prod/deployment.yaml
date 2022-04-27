@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: mvcapp
-        image: menesunlu/mvcapp:vlatest
+        image: menesunlu/mvcapp:v{BUILD_NUMBER}
         env:
           - name: PORT
             value: "80"
