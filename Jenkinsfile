@@ -5,7 +5,7 @@ pipeline {
       steps {
         echo 'Building'
         sh 'docker login https://enes.local.registry:5000 -u admin -p 12345678'
-        sh 'docker build /Dockerfile'
+        sh 'docker build https://github.com/menesunlu/mvcapp_from_ercanesee/blob/master/Dockerfile'
         sh 'docker tag mvcapp:${BUILD_NUMBER}v enes.local.registry:5000/mvcapp:${BUILD_NUMBER}v'
         sh 'docker push enes.local.registry:5000/mvcapp:${BUILD_NUMBER}v'
       }
