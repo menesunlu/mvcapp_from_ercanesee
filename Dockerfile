@@ -15,5 +15,3 @@ WORKDIR /app
 COPY --from=build-env /app/out .
 
 CMD ["dotnet" , "mvcapp.dll"]
-
-RUN echo "enes"
