@@ -14,7 +14,6 @@ pipeline {
     stage('Test') {
       steps {
         echo 'Testing'
-        waitForQualityGate(credentialsId: 'sonar', webhookSecretId: 'GITHUB', abortPipeline: true)
       }
     }
 
