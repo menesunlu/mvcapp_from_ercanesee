@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: mvcapp
-        image: bshregistrysrv:5000/mvcapp:${DOCKER_BUILD_NUMBER}
+        image: bshregistrysrv:5000/mvcapp:DOCKER_BUILD_NUMBER
         env:
           - name: PORT
             value: "80"
