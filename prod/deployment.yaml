@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: mvcapp
-        image: enes.local.registry:5000/mvcapp:v${DOCKER_BUILD_NUMBER}
+        image: enes.local.registry:5000/mvcapp:${DOCKER_BUILD_NUMBER}v
         env:
           - name: PORT
             value: "80"
