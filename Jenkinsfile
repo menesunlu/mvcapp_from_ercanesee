@@ -12,7 +12,7 @@ pipeline {
 
     stage('Deployment') {
       steps {
-        sh 'envsubst < ../prod/deployment.yaml | kubectl apply -f -'
+        sh 'envsubst < ./prod/deployment.yaml | kubectl apply -f -'
         sh 'kubectl apply -f ./prod/service.yaml'
       }
     }
