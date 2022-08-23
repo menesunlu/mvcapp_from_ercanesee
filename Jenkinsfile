@@ -12,13 +12,13 @@ pipeline {
 
     stage('Deployment') {
       steps {
-        sh 'echo ${DOCKER_BUILD_NUMBER}'
-        sh 'envsubst < ./prod/deployment.yaml | kubectl apply -f -'
-        sh 'kubectl apply -f ./prod/service.yaml'
         script {
           env.DOCKER_BUILD_NUMBER="${BUILD_NUMBER}"
         }
 
+        sh 'echo ${DOCKER_BUILD_NUMBER}'
+        sh 'envsubst < ./prod/deployment.yaml | kubectl apply -f -'
+        sh 'kubectl apply -f ./prod/service.yaml'
       }
     }
 
